@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password', 80);
             $table->unsignedBigInteger('role_id');
             $table->timestamps();
-
+            // $table->onD
             $table->foreign('role_id')
                 ->onDelete('cascade')
                 ->onUpdate('cascade')

@@ -37,6 +37,14 @@ class DatabaseSeeder extends Seeder
             'password' => 'password',
             'role_id' => 10000,
         ]);
+        User::create([
+            'name' => 'Yair',
+            'last_name' => 'Garcia',
+            'cellphone' => '7731441962',
+            'email' => 'ayir@gmail.com',
+            'password' => 'password',
+            'role_id' => 10001,
+        ]);
 
         // Create 10 user in the database with its factory
         // User::factory(2)->create();
@@ -45,10 +53,13 @@ class DatabaseSeeder extends Seeder
         Board::factory(5)->create();
 
         // Create relation between users and boards, 5 relations
-        UserHasBoards::factory(1)->create();
+        UserHasBoards::factory(10)->create();
 
         // Create activities for the boards
         Activity::factory(30)->create();
+
+
+        User::factory(10)->create();
 
         // Create roles for the web app: "user" and "admin"
 

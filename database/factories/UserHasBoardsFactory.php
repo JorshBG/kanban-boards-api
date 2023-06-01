@@ -19,8 +19,8 @@ class UserHasBoardsFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => fake()->randomElement(User::all()->pluck('id')),
-            'board_id' => fake()->randomElement(Board::all()->pluck('id'))
+            'user_id' => '10000',
+            'board_id' => Board::factory()->create()->id// fake()->randomElement(Board::all()->pluck('id'))
         ];
     }
 }
